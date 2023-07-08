@@ -65,14 +65,14 @@ namespace TerrariaProj.Controllers
             return NoContent();
         }
 
-        [HttpGet("items")]
-        public IActionResult GetItems()
+        [HttpGet("Item")]
+        public IActionResult GetItem()
         {
-            var items = _repository.GetItems();
-            return Ok(items);
+            var item = _repository.GetItem();
+            return Ok(item);
         }
 
-        [HttpGet("items/{id}")]
+        [HttpGet("Item/{id}")]
         public IActionResult GetItemById(int id)
         {
             var item = _repository.GetItemById(id);
@@ -82,14 +82,14 @@ namespace TerrariaProj.Controllers
             return Ok(item);
         }
 
-        [HttpPost("items")]
+        [HttpPost("Items")]
         public IActionResult CreateItem(Item item)
         {
             _repository.CreateItem(item);
-            return CreatedAtAction(nameof(GetItemById), new { id = item.Id }, item);
+            return CreatedAtAction(nameof(GetItemById), new { id = item.id }, item);
         }
 
-        [HttpPut("items/{id}")]
+        [HttpPut("Item/{id}")]
         public IActionResult UpdateItem(int id, Item updatedItem)
         {
             var item = _repository.GetItemById(id);
@@ -104,7 +104,7 @@ namespace TerrariaProj.Controllers
             return NoContent();
         }
 
-        [HttpDelete("items/{id}")]
+        [HttpDelete("Item/{id}")]
         public IActionResult DeleteItem(int id)
         {
             var item = _repository.GetItemById(id);
@@ -115,14 +115,14 @@ namespace TerrariaProj.Controllers
             return NoContent();
         }
 
-        [HttpGet("worlds")]
-        public IActionResult GetWorlds()
+        [HttpGet("World")]
+        public IActionResult GetWorld()
         {
-            var world = _repository.GetWorlds();
+            var world = _repository.GetWorld();
             return Ok(world);
         }
 
-        [HttpGet("worlds/{id}")]
+        [HttpGet("World/{id}")]
         public IActionResult GetWorldById(int id)
         {
             var world = _repository.GetWorldById(id);
@@ -132,14 +132,14 @@ namespace TerrariaProj.Controllers
             return Ok(world);
         }
 
-        [HttpPost("worlds")]
+        [HttpPost("World")]
         public IActionResult CreateWorld(World world)
         {
             _repository.CreateWorld(world);
-            return CreatedAtAction(nameof(GetWorldById), new { world = world.Id }, world);
+            return CreatedAtAction(nameof(GetWorldById), new { world = world.id }, world);
         }
 
-        [HttpPut("worlds/{id}")]
+        [HttpPut("World/{id}")]
         public IActionResult UpdateWorld(int id, World updatedWorld)
         {
             var world = _repository.GetWorldById(id);
@@ -154,7 +154,7 @@ namespace TerrariaProj.Controllers
             return NoContent();
         }
 
-        [HttpDelete("worlds/{id}")]
+        [HttpDelete("World/{id}")]
         public IActionResult DeleteWorld(int id)
         {
             var world = _repository.GetWorldById(id);

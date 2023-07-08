@@ -44,7 +44,7 @@ namespace TerrariaProj
         }
 
 
-        public IEnumerable<Item> GetItems()
+        public IEnumerable<Item> GetItem()
         {
             throw new NotImplementedException();
         }
@@ -65,7 +65,7 @@ namespace TerrariaProj
         }
 
 
-        public IEnumerable<World> GetWorlds()
+        public IEnumerable<World> GetWorld()
         {
             throw new NotImplementedException();
         }
