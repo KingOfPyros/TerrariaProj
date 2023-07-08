@@ -10,5 +10,17 @@ namespace TerrariaProj.Interface
         void UpdatePlayer(Player player);
         void DeletePlayer(string name);
 
+        IEnumerable<Item> GetItems();
+        Item GetItemById(int id);
+        void CreateItem(Item item);
+        void UpdateItem(Item item);
+        void DeleteItem(int id);
+
+        IEnumerable<World> GetWorlds();
+        World GetWorldById(int id);
+        void CreateWorld(World world);
+        void UpdateWorld(World world);
+        void DeleteWorld(int id);
+
     }
 }
