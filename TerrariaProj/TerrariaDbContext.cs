@@ -15,6 +15,8 @@ namespace TerrariaProj
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Item>().ToTable("Items");
+            modelBuilder.Entity<World>().ToTable("Worlds");
         }
     }
 }
