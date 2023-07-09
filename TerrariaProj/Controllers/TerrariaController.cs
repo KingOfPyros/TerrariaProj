@@ -8,7 +8,7 @@ namespace TerrariaProj.Controllers
     [Route("api/terraria")]
     public class TerrariaController : ControllerBase
     {
-        private readonly ITerrariaRepository _repository;
+        private ITerrariaRepository _repository;
 
         public TerrariaController(ITerrariaRepository repository)
         {
